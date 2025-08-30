@@ -6,10 +6,9 @@ python.toolchain(
 )
 
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+use_repo(pip, "pypi")
 pip.parse(
     hub_name = "pypi",
     python_version = "3.13",
-    requirements_lock = "//:requirements_lock.txt",
+    requirements_lock = "//requirements:requirements_lock_3_13.txt",
 )
-
-use_repo(pip, "pypi")
