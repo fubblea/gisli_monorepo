@@ -8,5 +8,6 @@ py_binary(
     requirement("numpy"),
     requirement("nicegui"),
     requirement("pywebview"),
+    "//libs/compressor:compressor",
   ]
 )
