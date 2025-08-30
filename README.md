@@ -1,16 +1,24 @@
 # Gisli Monorepo
 
-## Create a Python venv
+## Setup
+
+- Install bazelisk
+- Install uv
+- Install just
+
+## Commands
+
+### Create a Python venv
 
 `just install`
 
 Run all bazelisk commands in this venv
 
-## Update Requirements Lock Files
+### Update Requirements Lock Files
 
 `just update-deps`
 
-## Build Targets
+### Build Targets
 
 `just build-all`
 
@@ -18,7 +26,7 @@ Build all with update reqs:
 
 `just build-all-with-update`
 
-## Running Targets
+### Running Targets
 
 `bazelist run //<target>`
 
