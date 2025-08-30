@@ -1,10 +1,23 @@
 load("@rules_python//python:py_binary.bzl", "py_binary")
 load("@pypi//:requirements.bzl", "requirement")
+load("@rules_python//python:packaging.bzl", "py_wheel")
 
 py_binary(
   name = "cli",
   srcs = ["src/cli.py"],
   deps = [
       requirement("typer"),
+      "//libs/compressor:compressor",
   ]
+)
+
+py_wheel(
+  name = "compressor_wheel",
+  deps = [
+      requirement("typer"),
+      "//libs/compressor:compressor",
+  ],
+  version = "0.1.0",
+  distribution = "compressor",
+  tags = ["pypi", "release"],
 )
