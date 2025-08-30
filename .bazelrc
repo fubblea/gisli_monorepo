@@ -1,0 +1,1 @@
+build --action_env=PYTHON_BIN_PATH=.venv/Scripts/python.exe

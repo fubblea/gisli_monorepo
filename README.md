@@ -1,19 +1,25 @@
 # Gisli Monorepo
 
+## Create a Python venv
+
+`just install`
+
+Run all bazelisk commands in this venv
+
 ## Update Requirements Lock Files
 
-Per Python Version if it's different
-
-`bazelisk run //requirements:requirements_3_13.update`
+`just update-deps`
 
 ## Build Targets
 
-For all targets:
+`just build-all`
 
-`bazelisk build //...`
+Build all with update reqs:
+
+`just build-all-with-update`
 
 ## Running Targets
 
 `bazelist run //<target>`
 
-Targets are also compiled to `bazel-bin/` folder
+Targets are compiled to `bazel-bin/` folder
